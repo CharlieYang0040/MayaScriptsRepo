@@ -1,6 +1,7 @@
 # Texture Path Replacer
 
 `Texture Path Replacer`는 Autodesk Maya에서 파일 텍스처 경로를 관리하고 수정하기 위한 도구입니다. 
+
 이 스크립트는 잘못된 텍스처 경로를 자동으로 감지하고, 경로를 수정하며, 필요한 경우 파일을 새로운 경로로 복사할 수 있습니다.
 
 ## 기능
