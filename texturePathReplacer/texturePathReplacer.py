@@ -18,7 +18,7 @@ def log_message(message, level=logging.INFO):
 
 # GitHub 링크 함수
 def open_github_link(*args):
-    webbrowser.open("https://github.com/CharlieYang0040/MayaScriptsRepo/blob/main/texturePathReplacer.py")
+    webbrowser.open("https://github.com/CharlieYang0040/MayaScriptsRepo/tree/main/texturePathReplacer")
 
 # 잘못된 텍스처 경로를 자동으로 설정하는 함수
 def get_auto_wrong_texture_path(selected_node):
