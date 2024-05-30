@@ -244,7 +244,12 @@ def create_ui():
     
     cmds.separator(height=10, style='in')
     
-    cmds.button(label="Search File Nodes", command=populate_file_nodes_list)
+    cmds.button(
+        label="Search File Nodes", 
+        command=populate_file_nodes_list,
+        backgroundColor=(0.35, 0.5, 0.65),
+    )
+
     cmds.textScrollList('fileNodesList', numberOfRows=8, allowMultiSelection=True)
     
     cmds.separator(height=10, style='in')
