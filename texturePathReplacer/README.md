@@ -11,6 +11,9 @@
 - 각 파일 노드마다 개별 경로 설정 지원
 - GitHub 링크를 통해 도움말 및 스크립트 업데이트 확인
 
+![howtouse](https://github.com/CharlieYang0040/MayaScriptsRepo/assets/129147417/c7093750-9892-46ac-880c-c83684b4c66d)
+
+
 ## 설치 방법
 
 1. `texturePathReplacer.py` 파일을 다운로드합니다.
