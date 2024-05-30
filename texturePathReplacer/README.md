@@ -30,14 +30,15 @@
 
 - 위 명령어를 실행하면 `Texture Path Replacer` UI가 열립니다.
   
-![image](https://github.com/CharlieYang0040/MayaScriptsRepo/assets/129147417/9503e14a-23e9-4fdb-8115-a5af0ce53fee)
+![image](https://github.com/CharlieYang0040/MayaScriptsRepo/assets/129147417/cab3b4f2-e959-4520-babd-1e7493a52130)
+
 
 
 
 ### 2. 기본 사용법
 
 - **Help 버튼**: `Texture Path Replacer (open help)` 버튼을 클릭하면 GitHub 리포지토리의 도움말 페이지가 열립니다.
-- 먼저 `Search File Nodes` 버튼을 클릭하여 잘못된 텍스처 경로를 가진 파일 노드를 검색합니다.
+- **파일노드 검색** : 먼저 `Search File Nodes` 버튼을 클릭하여 잘못된 텍스처 경로를 가진 파일 노드를 검색합니다.
 
 ### 3. 프로젝트 경로 수정
 
