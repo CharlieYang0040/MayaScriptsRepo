@@ -1,6 +1,7 @@
 # V-Ray Batch Script Generator for Maya
 
-Autodesk Maya를 위한 V-Ray 배치 스크립트 생성기입니다. 이 도구는 Python과 PySide2를 사용하여 개발되었으며, 
+Autodesk Maya를 위한 V-Ray 배치 스크립트 생성기입니다. 
+이 도구는 Python과 PySide2를 사용하여 개발되었으며, 
 배치 렌더링 스크립트를 쉽게 생성할 수 있는 그래픽 사용자 인터페이스(GUI)를 제공합니다. 
 이 도구를 사용하면 V-Ray를 사용하여 여러 Maya 씬의 렌더링 프로세스를 자동화하고 관리할 수 있습니다.
 
