@@ -20,8 +20,15 @@ Autodesk Maya를 위한 V-Ray 배치 스크립트 생성기입니다. 이 도구
 
 ## 실행법
 
-- [Releases](https://github.com/CharlieYang0040/MayaScriptsRepo/releases)([바로받기](https://github.com/CharlieYang0040/MayaScriptsRepo/releases/download/v0.1.0/vrayBatchScriptGenUI.exe))에서 `vrayBatchScriptGenUI.exe` 실행파일을 다운로드 받습니다.
-- 다운로드 받은 `vrayBatchScriptGenUI.exe`를 더블 클릭하여 실행합니다.
+- [Releases](https://github.com/CharlieYang0040/MayaScriptsRepo/releases)([바로받기](https://github.com/CharlieYang0040/MayaScriptsRepo/releases/download/v0.1.0/vrayBatchScriptGenUI.exe))에서 `vrayBatchScriptGenUI.exe` 실행파일을 다운로드 받아 실행합니다.
+- **Scene File**을 선택하면 경로를 자동으로 찾습니다.
+- **Open Scene File**을 클릭하면 Scene을 읽어서 렌더 세팅을 가지고 옵니다. (무거운 Scene일 경우 오래 걸릴 수 있음)
+- 렌더 세팅을 설정한 뒤, **Generate Batch Script**를 누르면 프로젝트 경로에 렌더 스크립트가 생성됩니다.
+
+![image](https://github.com/CharlieYang0040/MayaScriptsRepo/assets/129147417/61941acb-9b2b-4234-86c0-3db08063fdb4)
+
+- **Execute Batch Script**버튼을 누르거나 이 스크립트를 찾아 실행하면 렌더가 시작됩니다.
+
 
 ## 위젯 및 버튼 설명
 
