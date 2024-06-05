@@ -1,7 +1,7 @@
 # V-Ray Batch Script Generator for Maya
 
-Autodesk Maya를 위한 V-Ray 배치 스크립트 생성기입니다. 이 도구는 Python과 PySide2를 사용하여 개발되었으며, 
-배치 렌더링 스크립트를 쉽게 생성할 수 있는 그래픽 사용자 인터페이스(GUI)를 제공합니다. 
+Autodesk Maya를 위한 V-Ray 배치 스크립트 생성기입니다. 
+이 도구는 Python과 PySide2를 사용하여 개발되었으며, 배치 렌더링 스크립트를 쉽게 생성할 수 있는 그래픽 사용자 인터페이스(GUI)를 제공합니다. 
 이 도구를 사용하면 V-Ray를 사용하여 여러 Maya 씬의 렌더링 프로세스를 자동화하고 관리할 수 있습니다.
 
 (현재는 Maya의 경로를 Maya2023버전으로 생성합니다.)
@@ -17,6 +17,18 @@ Autodesk Maya를 위한 V-Ray 배치 스크립트 생성기입니다. 이 도구
 - 렌더 레이어 설정
 - 배치 렌더 스크립트 생성 및 실행
 - 씬 파일 열기 진행 상황 및 로깅 표시
+
+## 실행법
+
+- [Releases](https://github.com/CharlieYang0040/MayaScriptsRepo/releases)([바로받기](https://github.com/CharlieYang0040/MayaScriptsRepo/releases/download/v0.1.0/vrayBatchScriptGenUI.exe))에서 `vrayBatchScriptGenUI.exe` 실행파일을 다운로드 받아 실행합니다.
+- **Scene File**을 선택하면 경로를 자동으로 찾습니다.
+- **Open Scene File**을 클릭하면 Scene을 읽어서 렌더 세팅을 가지고 옵니다. (무거운 Scene일 경우 오래 걸릴 수 있음)
+- 렌더 세팅을 설정한 뒤, **Generate Batch Script**를 누르면 프로젝트 경로에 렌더 스크립트가 생성됩니다.
+
+![image](https://github.com/CharlieYang0040/MayaScriptsRepo/assets/129147417/61941acb-9b2b-4234-86c0-3db08063fdb4)
+
+- **Execute Batch Script**버튼을 누르거나 이 스크립트를 찾아 실행하면 렌더가 시작됩니다.
+
 
 ## 위젯 및 버튼 설명
 
