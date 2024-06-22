@@ -114,7 +114,7 @@ class MtlMakerUI(QtWidgets.QDialog):
         self.log_message(f"VRayMtl node for {asset_name} completed.")
 
     def open_help(self):
-        url = "https://github.com/CharlieYang0040/MayaScriptsRepo/mtlMaker"  # Replace with your actual URL
+        url = "https://github.com/CharlieYang0040/MayaScriptsRepo/tree/main/mtlMaker"  # Replace with your actual URL
         cmds.launch(webBrowser=url)
 
     def connect_place2d(self, file_node, place2d_node):
