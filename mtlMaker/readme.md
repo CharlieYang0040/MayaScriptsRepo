@@ -17,10 +17,11 @@
 ## 설치 방법
 
 - mtlMaker_Install.exe 를 [다운로드](https://github.com/CharlieYang0040/MayaScriptsRepo/blob/main/mtlMaker/pyinstaller/dist/mtlMaker_Install.exe) 후 실행합니다.
+- Maya를 재시작합니다.
 
 ## 사용 방법
 
-1. Maya의 `shelf_Custom` 셸프에서 `mtlMaker` 버튼을 클릭합니다.
+1. Maya의 `Custom` 셸프에서 `mtlMaker` 버튼을 클릭합니다.
 2. `Search` 버튼을 클릭하여 프로젝트 폴더의 텍스쳐를 검색합니다.
 3. 목록에서 하나 이상의 폴더를 선택합니다.
 4. `Make` 버튼을 클릭하여 선택된 폴더의 텍스쳐를 VRayMtl 노드에 연결합니다.
