@@ -29,7 +29,7 @@
 
 더 많은 정보나 문제가 있을 경우,
 
- GitHub 페이지의 [도움말 섹션](https://github.com/CharlieYang0040/MayaScriptsRepo/mtlMaker)을 참조하세요.
+ GitHub 페이지의 [도움말 섹션](https://github.com/CharlieYang0040/MayaScriptsRepo/tree/main/mtlMaker)을 참조하세요.
 
 ## 기여
 
