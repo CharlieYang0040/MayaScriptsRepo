@@ -2,6 +2,8 @@
 
 `mtlMaker`는 Autodesk Maya용 플러그인으로, 프로젝트 폴더의 텍스쳐를 자동으로 찾아 VRayMtl 노드에 연결해주는 도구입니다. 이 플러그인을 사용하면 텍스쳐를 자동으로 로드하고, 올바른 속성에 연결하여 머티리얼을 손쉽게 구성할 수 있습니다.
 
+![test_video](https://github.com/CharlieYang0040/MayaScriptsRepo/assets/129147417/63d2aa28-6c1e-4060-b8fb-96bd844e1523)
+
 ## 기능
 
 - 프로젝트 폴더에서 텍스쳐 자동 검색
