@@ -8,6 +8,7 @@ class MtlMakerUI(QtWidgets.QDialog):
         super(MtlMakerUI, self).__init__(parent)
         self.setWindowTitle('mtlMaker by CGUSLAB')
         self.resize(300, 500)
+        self.setWindowFlags(self.windowFlags() | QtCore.Qt.WindowStaysOnTopHint)  # Always on top
         self.setup_ui()
         self.project_path = cmds.workspace(q=True, rd=True) + 'sourceimages/'
 
