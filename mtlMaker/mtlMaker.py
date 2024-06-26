@@ -2,6 +2,7 @@ import os
 import re
 import maya.cmds as cmds
 from PySide2 import QtWidgets, QtCore
+import webbrowser
 
 class MtlMakerUI(QtWidgets.QDialog):
     def __init__(self, parent=None):
@@ -116,7 +117,7 @@ class MtlMakerUI(QtWidgets.QDialog):
 
     def open_help(self):
         url = "https://github.com/CharlieYang0040/MayaScriptsRepo/tree/main/mtlMaker"  # Replace with your actual URL
-        cmds.launch(webBrowser=url)
+        webbrowser.open(url)
 
     def connect_place2d(self, file_node, place2d_node):
         attrs = [

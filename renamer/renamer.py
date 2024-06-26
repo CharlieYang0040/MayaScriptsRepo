@@ -1,5 +1,6 @@
 import maya.cmds as cmds
 from PySide2 import QtWidgets, QtCore
+import webbrowser
 
 class RenamerUI(QtWidgets.QWidget):
     def __init__(self, parent=None):
@@ -8,6 +9,7 @@ class RenamerUI(QtWidgets.QWidget):
         self.setWindowFlags(self.windowFlags() | QtCore.Qt.WindowStaysOnTopHint)
         self.setup_ui()
         self.rename_button.clicked.connect(self.rename_nodes)
+        self.help_btn.clicked.connect(self.open_help)
 
     def setup_ui(self):
         """Setup the UI layout and widgets."""
@@ -27,7 +29,6 @@ class RenamerUI(QtWidgets.QWidget):
         self.log_text = QtWidgets.QTextEdit(readOnly=True)
 
         self.help_btn = QtWidgets.QPushButton('Help')
-        self.help_btn.clicked.connect(self.open_help)
         
         layout = QtWidgets.QVBoxLayout()
         mode_layout = QtWidgets.QHBoxLayout()
@@ -55,7 +56,7 @@ class RenamerUI(QtWidgets.QWidget):
 
     def open_help(self):
         url = "https://github.com/CharlieYang0040/MayaScriptsRepo/tree/main/renamer"
-        cmds.launch(webBrowser=url)
+        webbrowser.open(url)
 
     def collect_and_sort_nodes(self, mode):
         """Collect nodes based on the selected mode and sort them by depth."""

@@ -5,7 +5,7 @@ a = Analysis(
     ['mtlMaker_Install.py'],
     pathex=[],
     binaries=[],
-    datas=[('mtlMaker.py', 'mtlMaker')],
+    datas=[('.\\mtlMaker.py', '.')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},

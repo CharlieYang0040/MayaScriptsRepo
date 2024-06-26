@@ -1,6 +1,7 @@
-import os
+import os, sys
 import shutil
 import getpass
+from pathlib import Path
 
 def find_semicolon_outside_strings(lines):
     semicolon_positions = []
@@ -120,7 +121,7 @@ def main():
         if not os.path.exists(scripts_path):
             os.makedirs(scripts_path)
 
-        src_script_path = os.path.join(os.path.dirname(__file__), 'mtlMaker.py')
+        src_script_path = Path(sys._MEIPASS) / 'mtlMaker.py'
         copy_script_file(src_script_path, scripts_path)
 
 if __name__ == "__main__":
