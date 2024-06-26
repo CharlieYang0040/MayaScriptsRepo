@@ -19,7 +19,7 @@
 
 ### 수동 설치
 
-1. `Renamer.py` 파일을 [다운로드](https://raw.githubusercontent.com/CharlieYang0040/MayaScriptsRepo/blob/main/renamer/renamer.py)합니다.
+1. `Renamer.py` 파일을 [다운로드](https://raw.githubusercontent.com/CharlieYang0040/MayaScriptsRepo/main/renamer/renamer.py)합니다.
 2. 다운로드한 `.py` 파일을 Maya의 스크립트 폴더에 복사합니다.
 3. Maya를 열고 Script Editor에서 다음 명령을 실행합니다:
 
