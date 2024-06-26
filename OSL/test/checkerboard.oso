@@ -1,0 +1,42 @@
+OpenShadingLanguage 1.00
+# Compiled by oslc 1.11.3
+# options: 
+shader checkerboard	%meta{string,description,"Procedural checkerboard"} 
+param	float	s	0		%meta{string,description,"s coordinate for the lookup"} %meta{float,UImin,0} %meta{float,UIsoftmax,1}  %read{2,2} %write{0,0} %initexpr
+param	float	t	0		%meta{string,description,"t coordinate for the lookup"} %meta{float,UImin,0} %meta{float,UIsoftmax,1}  %read{4,4} %write{1,1} %initexpr
+param	float	scale_s	4		%meta{string,description,"scale factor for s coordinate"}  %read{2,2} %write{2147483647,-1}
+param	float	scale_t	4		%meta{string,description,"scale factor for t coordinate"}  %read{4,4} %write{2147483647,-1}
+param	color	Ca	1 1 1		%meta{string,description,"color of even squares"}  %read{11,11} %write{2147483647,-1}
+param	color	Cb	0 0 0		%meta{string,description,"color of odd squares"}  %read{12,12} %write{2147483647,-1}
+oparam	color	Cout	0 0 0		%meta{string,description,"Output color"} %meta{float,UImin,0} %meta{float,UImax,1}  %read{13,13} %write{11,12}
+oparam	float	Fout	0		%read{2147483647,-1} %write{13,13}
+global	float	u	%read{0,0} %write{2147483647,-1}
+global	float	v	%read{1,1} %write{2147483647,-1}
+local	float	cs	%read{6,6} %write{3,3}
+local	float	ct	%read{7,7} %write{5,5}
+temp	float	$tmp1	%read{3,3} %write{2,2}
+const	float	$const2	2		%read{3,5} %write{2147483647,-1}
+temp	float	$tmp2	%read{5,5} %write{4,4}
+temp	int	$tmp3	%read{8,8} %write{6,6}
+temp	int	$tmp4	%read{8,8} %write{7,7}
+temp	int	$tmp5	%read{9,9} %write{8,8}
+const	int	$const3	0		%read{9,9} %write{2147483647,-1}
+temp	int	$tmp6	%read{10,10} %write{9,9}
+code s
+	assign		s u 	%filename{"checkerboard.osl"} %line{10} %argrw{"wr"}
+code t
+	assign		t v 	%filename{"checkerboard.osl"} %line{13} %argrw{"wr"}
+code ___main___
+	mul		$tmp1 s scale_s 	%filename{"checkerboard.osl"} %line{31} %argrw{"wrr"}
+	fmod		cs $tmp1 $const2 	%argrw{"wrr"}
+	mul		$tmp2 t scale_t 	%line{32} %argrw{"wrr"}
+	fmod		ct $tmp2 $const2 	%argrw{"wrr"}
+	assign		$tmp3 cs 	%line{33} %argrw{"wr"}
+	assign		$tmp4 ct 	%argrw{"wr"}
+	xor		$tmp5 $tmp3 $tmp4 	%argrw{"wrr"}
+	eq		$tmp6 $tmp5 $const3 	%argrw{"wrr"}
+	if		$tmp6 12 13 	%argrw{"r"}
+	assign		Cout Ca 	%line{34} %argrw{"wr"}
+	assign		Cout Cb 	%line{36} %argrw{"wr"}
+	luminance	Fout Cout 	%line{38} %argrw{"wr"}
+	end
