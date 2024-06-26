@@ -217,7 +217,7 @@ def create_ui():
     if cmds.window("textureReplacerWindow", exists=True):
         cmds.deleteUI("textureReplacerWindow")
 
-    window = cmds.window("textureReplacerWindow", title="Texture Path Replacer", widthHeight=(600, 1100))
+    window = cmds.window("textureReplacerWindow", title="Texture Path Replacer by CGUSLAB", widthHeight=(600, 1100))
     main_layout = cmds.columnLayout(adjustableColumn=True)
     
     cmds.rowColumnLayout(numberOfColumns=2, columnWidth=[(1, 400), (2, 200)], parent=main_layout)
@@ -286,5 +286,3 @@ def create_ui():
     cmds.separator(height=10, style='out')
     
     cmds.showWindow(window)
-
-create_ui()
