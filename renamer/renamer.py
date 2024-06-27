@@ -25,6 +25,12 @@ class RenamerUI(QtWidgets.QWidget):
         self.replace_label = QtWidgets.QLabel("Replace:")
         self.replace_text = QtWidgets.QLineEdit()
         
+        self.prefix_label = QtWidgets.QLabel("Prefix:")
+        self.prefix_text = QtWidgets.QLineEdit()
+        
+        self.suffix_label = QtWidgets.QLabel("Suffix:")
+        self.suffix_text = QtWidgets.QLineEdit()
+        
         self.rename_button = QtWidgets.QPushButton("Rename")
         self.log_text = QtWidgets.QTextEdit(readOnly=True)
 
@@ -45,9 +51,16 @@ class RenamerUI(QtWidgets.QWidget):
         replace_layout.addWidget(self.replace_label)
         replace_layout.addWidget(self.replace_text)
         
+        prefix_suffix_layout = QtWidgets.QHBoxLayout()
+        prefix_suffix_layout.addWidget(self.prefix_label)
+        prefix_suffix_layout.addWidget(self.prefix_text)
+        prefix_suffix_layout.addWidget(self.suffix_label)
+        prefix_suffix_layout.addWidget(self.suffix_text)
+        
         layout.addLayout(mode_layout)
         layout.addLayout(find_layout)
         layout.addLayout(replace_layout)
+        layout.addLayout(prefix_suffix_layout)
         layout.addWidget(self.rename_button)
         layout.addWidget(self.log_text)
         layout.addWidget(self.help_btn)
@@ -100,6 +113,7 @@ class RenamerUI(QtWidgets.QWidget):
         path_parts = node.split('|')
         last_part = path_parts[-1]
         new_part = last_part.replace(self.find_text.text(), self.replace_text.text().replace(" ", "_"))
+        new_part = self.prefix_text.text() + new_part + self.suffix_text.text()
         
         if new_part != last_part:
             full_new_name = '|'.join(path_parts[:-1] + [new_part])
