@@ -4,10 +4,7 @@ Autodesk Maya를 위한 V-Ray 배치 스크립트 생성기입니다.
 이 도구는 Python과 PySide2를 사용하여 개발되었으며, 배치 렌더링 스크립트를 쉽게 생성할 수 있는 그래픽 사용자 인터페이스(GUI)를 제공합니다. 
 이 도구를 사용하면 V-Ray를 사용하여 여러 Maya 씬의 렌더링 프로세스를 자동화하고 관리할 수 있습니다.
 
-(현재는 Maya의 경로를 Maya2023버전으로 생성합니다.)
-
 ![image](https://github.com/CharlieYang0040/MayaScriptsRepo/assets/129147417/9ffa9c97-d2bb-4486-b25e-37ecd8fba728)
-
 
 ## 주요 기능
 
@@ -17,6 +14,7 @@ Autodesk Maya를 위한 V-Ray 배치 스크립트 생성기입니다.
 - 렌더 레이어 설정
 - 배치 렌더 스크립트 생성 및 실행
 - 씬 파일 열기 진행 상황 및 로깅 표시
+- 설치된 Maya 버전을 찾고 가장 최신 버전으로 실행합니다.
 
 ## 실행법
 

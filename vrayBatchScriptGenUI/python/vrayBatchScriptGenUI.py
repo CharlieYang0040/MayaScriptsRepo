@@ -1,10 +1,6 @@
-import sys
-import os
-import subprocess
-import webbrowser
+import os, sys, re, subprocess, webbrowser, logging
 import maya.standalone
 import maya.cmds as cmds
-import logging
 from PySide2.QtWidgets import (
     QApplication, QWidget, QLabel, QLineEdit, QPushButton, QFileDialog,
     QVBoxLayout, QHBoxLayout, QComboBox, QDoubleSpinBox, QMessageBox, QTextEdit, QListWidget, QListWidgetItem, QProgressBar
@@ -36,7 +32,7 @@ class BatchScriptGenerator(QWidget):
         self.logger.addHandler(text_edit_logger)
 
     def initUI(self):
-        self.setWindowTitle('Batch Script Generator for V-Ray in Maya')
+        self.setWindowTitle('V-Ray Batch Script Generator for Maya by CGUSLAB')
         self.setGeometry(300, 300, 800, 600)
 
         mainLayout = QHBoxLayout()
@@ -310,8 +306,18 @@ class BatchScriptGenerator(QWidget):
         if not projectPath or not sceneFile or not outputDir:
             QMessageBox.warning(self, 'Input Error', 'Please provide all necessary inputs.')
             return
+        
+        # Maya version check
+        base_path = 'C:\\Program Files\\Autodesk'
+        version_pattern = re.compile(r'Maya(\d{4})')
+        maya_versions = []
+        for entry in os.listdir(base_path):
+            match = version_pattern.search(entry)
+            if match:
+                maya_versions.append(match.group(1))
+        highest_version = max(maya_versions, key=int)
 
-        renderCommand = f'"C:\\Program Files\\Autodesk\\Maya2023\\bin\\Render.exe" -r vray -proj "{projectPath}" '
+        renderCommand = f'"C:\\Program Files\\Autodesk\\Maya{highest_version}\\bin\\Render.exe" -r vray -proj "{projectPath}" '
         renderCommand += f'-rd "{outputDir}" '
 
         if imageFormat != "default":
