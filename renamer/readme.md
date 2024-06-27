@@ -2,7 +2,7 @@
 
 `Renamer`는 Autodesk Maya 사용자를 위해 개발된 강력한 이름 변경 도구입니다. 이 플러그인은 복잡한 계층구조에서 노드의 이름을 쉽고 빠르게 일괄 변경할 수 있도록 도와줍니다.
 
-![image](https://github.com/CharlieYang0040/MayaScriptsRepo/assets/129147417/eb64be65-8992-4a45-9693-04350b97d85b)
+![image](https://github.com/CharlieYang0040/MayaScriptsRepo/assets/129147417/ad8aea3d-f4bb-46cb-add7-86d73af5ddf3)
 
 ## 특징
 
