@@ -56,10 +56,8 @@ def update_buttons(existing_buttons, new_button, button_label):
 
 def write_updated_mel_file(mel_file_path, pre_button_content, updated_buttons):
     with open(mel_file_path, 'w', encoding='utf-8') as file:
-        print(f"updated_buttons2: {updated_buttons}")
         file.write(pre_button_content)
         for button in updated_buttons:
-            print(f"writing button: {button}")
             file.write(f"{button}\n")
         file.write("}\n")
 
@@ -154,3 +152,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    input("Press Enter to continue...")
